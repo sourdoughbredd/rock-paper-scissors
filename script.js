@@ -12,15 +12,20 @@ function getUserChoice() {
     
     // Get choice from user
     choiceRaw = prompt('What\'s your move? (rock, paper, or scissors): ')
-    choice = choiceRaw.toLowerCase();
-    // Validate user choice
-    possibleChoices = ['rock', 'paper', 'scissors'];
-    if (!possibleChoices.includes(choice)) {
-        // Choice is invalid. Prompt for new choice.
-        console.log("Invalid move! Please choose either 'rock', 'paper', or 'scissors'.");
-        getUserChoice();
+    if (choiceRaw === null) {
+        // User pressed cancel. End game.
+        endGame();
+    } else {
+        choice = choiceRaw.toLowerCase();
+        // Validate user choice
+        possibleChoices = ['rock', 'paper', 'scissors'];
+        if (!possibleChoices.includes(choice)) {
+            // Choice is invalid. Prompt for new choice.
+            console.log("Invalid move! Please choose either 'rock', 'paper', or 'scissors'.");
+            getUserChoice();
+        }
+        return choice
     }
-    return choice
 }
 
 function playRound(userChoice, computerChoice) {
@@ -80,6 +85,20 @@ function game() {
         // Play a round
         // Display round results
     // End the current game
+
+    while (userScore < 3 && computerScore < 3) {
+        let userChoice = getUserChoice();
+        let computerChoice = getComputerChoice();
+        roundResults = playRound(userChoice, computerChoice);
+        console.log(roundResults);
+        if (roundResults === 'Tie!') {
+            console.log('Replaying round...')
+        } else {
+            console.log(`Current Score | You: ${userScore} , Computer: ${computerScore}`)
+        }
+    }
+    //endGame();
+    console.log('Run endGame() here')
 }
 
 let userScore = 0;
