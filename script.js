@@ -9,10 +9,18 @@ function getComputerChoice() {
 
 function getUserChoice() {
     // Prompts the user to make their choice
-
-    // Prompt user for choice
+    
+    // Get choice from user
+    choiceRaw = prompt('What\'s your move? (rock, paper, or scissors): ')
+    choice = choiceRaw.toLowerCase();
     // Validate user choice
-    // Return user choice
+    possibleChoices = ['rock', 'paper', 'scissors'];
+    if (!possibleChoices.includes(choice)) {
+        // Choice is invalid. Prompt for new choice.
+        console.log("Invalid move! Please choose either 'rock', 'paper', or 'scissors'.");
+        getUserChoice();
+    }
+    return choice
 }
 
 function playRound(userChoice, computerChoice) {
