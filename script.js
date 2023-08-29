@@ -26,10 +26,41 @@ function getUserChoice() {
 function playRound(userChoice, computerChoice) {
     // Returns a string with the round results
 
-    // Compare choices to determine winner
-        // If tie, do not increment scores
-        // Else add 1 to score of winner
-    // Return round results
+    if (userChoice === computerChoice) {
+        // Tie
+        return 'Tie!'
+    } else {
+        // User and computer chose differently. Determine winner.
+        switch (userChoice) {
+            case 'rock':
+                if (computerChoice == 'scissors') {
+                    userScore += 1;
+                    return 'Rock beats scissors! You win!';
+                } else {
+                    // Computer chose paper
+                    computerScore += 1;
+                    return 'Paper beats rock! You lose!'
+                }
+            case 'paper':
+                if (computerChoice == 'rock') {
+                    userScore += 1;
+                    return 'Paper beats rock! You win!';
+                } else {
+                    // Computer chose scissors
+                    computerScore += 1;
+                    return 'Scissors beats paper! You lose!'
+                }
+            case 'scissors':
+                if (computerChoice == 'paper') {
+                    userScore += 1;
+                    return 'Scissors beats paper! You win!';
+                } else {
+                    // Computer chose rock
+                    computerScore += 1;
+                    return 'Rock beats scissors! You lose!'
+                }
+        }
+    }
 }
 
 function endGame() {
@@ -50,4 +81,7 @@ function game() {
         // Display round results
     // End the current game
 }
+
+let userScore = 0;
+let computerScore = 0;
 
