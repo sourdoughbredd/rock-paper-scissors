@@ -29,17 +29,17 @@ function endGame() {
 
     // Report results of game
     // Ask if user would like to play again
-    // If user wants to play again. Start new game
+    // If user wants to play again, reset scores and start new game
     // Else exit program
 }
 
 function game() {
     // Runs a best-of-5 game and returns the game results
 
-    // Reset scores to 0
     // While both scores are less than 3
         // Get a user choice and computer choice
         // Play a round
         // Display round results
     // End the current game
 }
+
