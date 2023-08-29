@@ -14,6 +14,7 @@ function getUserChoice() {
     choiceRaw = prompt('What\'s your move? (rock, paper, or scissors): ')
     if (choiceRaw === null) {
         // User pressed cancel. End game.
+        console.log('You pressed cancel. Ending game...')
         endGame();
     } else {
         choice = choiceRaw.toLowerCase();
@@ -97,8 +98,7 @@ function game() {
             console.log(`Current Score | You: ${userScore} , Computer: ${computerScore}`)
         }
     }
-    //endGame();
-    console.log('Run endGame() here')
+    endGame();
 }
 
 let userScore = 0;
