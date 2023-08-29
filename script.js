@@ -72,20 +72,22 @@ function playRound(userChoice, computerChoice) {
 function endGame() {
     // Ends the current game and asks user if they'd like to play again
 
-    // Report results of game
-    // Ask if user would like to play again
-    // If user wants to play again, reset scores and start new game
-    // Else exit program
+    console.log(`GAME OVER! Final Score - You: ${userScore}, Computer: ${computerScore}`);
+    playAgain = prompt("Would you like to play again? (y/n)");
+    if (playAgain === 'y' || playAgain === 'Y'){
+        // Reset scores and play again!
+        userScore = 0;
+        computerScore = 0;
+        console.log('Starting a new game!')
+        game();
+    } else {
+        // End program
+        console.log('Thank you for playing. Bye!')
+    }
 }
 
 function game() {
     // Runs a best-of-5 game and returns the game results
-
-    // While both scores are less than 3
-        // Get a user choice and computer choice
-        // Play a round
-        // Display round results
-    // End the current game
 
     while (userScore < 3 && computerScore < 3) {
         let userChoice = getUserChoice();
@@ -103,4 +105,5 @@ function game() {
 
 let userScore = 0;
 let computerScore = 0;
+game();
 
