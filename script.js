@@ -1,10 +1,10 @@
 function getComputerChoice() {
     // Returns a (random) move for the computer
 
-    // Create array of possible choices
-    // Generate random number for array index
-    // Extract choice from array using the random index
-    // Return choice
+    possibleChoices = ['rock', 'paper', 'scissors'];
+    choiceIndex = Math.floor(Math.random() * 3);  // random number 0-2
+    choice = possibleChoices[choiceIndex];
+    return choice;
 }
 
 function getUserChoice() {
