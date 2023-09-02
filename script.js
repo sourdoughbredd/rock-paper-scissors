@@ -87,27 +87,27 @@ function endGame() {
     }
 }
 
-function game() {
-    // Runs a best-of-5 game and returns the game results
+// function game() {
+//     // Runs a best-of-5 game and returns the game results
 
-    while (userScore < 3 && computerScore < 3) {
-        let userChoice = getUserChoice();
-        let computerChoice = getComputerChoice();
-        if (!keepPlaying) break;
-        roundResults = playRound(userChoice, computerChoice);
-        console.log(roundResults);
-        if (roundResults === 'Tie!') {
-            console.log('Replaying round...')
-        } else {
-            console.log(`Current Score | You: ${userScore} , Computer: ${computerScore}`)
-        }
-    }
-    endGame();
-}
+//     while (userScore < 3 && computerScore < 3) {
+//         let userChoice = getUserChoice();
+//         let computerChoice = getComputerChoice();
+//         if (!keepPlaying) break;
+//         roundResults = playRound(userChoice, computerChoice);
+//         console.log(roundResults);
+//         if (roundResults === 'Tie!') {
+//             console.log('Replaying round...')
+//         } else {
+//             console.log(`Current Score | You: ${userScore} , Computer: ${computerScore}`)
+//         }
+//     }
+//     endGame();
+// }
 
-let userScore = 0;
-let computerScore = 0;
-let keepPlaying = true;
-while (keepPlaying) {
-    game();
-}
+// let userScore = 0;
+// let computerScore = 0;
+// let keepPlaying = true;
+// while (keepPlaying) {
+//     game();
+// }
