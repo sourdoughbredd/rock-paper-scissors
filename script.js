@@ -15,7 +15,7 @@ function getUserChoice() {
     if (choiceRaw === null) {
         // User pressed cancel. End game.
         console.log('You pressed cancel. Ending game...')
-        endGame();
+        keepPlaying = false;
     } else {
         choice = choiceRaw.toLowerCase();
         // Validate user choice
@@ -78,10 +78,11 @@ function endGame() {
         // Reset scores and play again!
         userScore = 0;
         computerScore = 0;
+        keepPlaying = true;
         console.log('Starting a new game!')
-        game();
     } else {
         // End program
+        keepPlaying = false;
         console.log('Thank you for playing. Bye!')
     }
 }
@@ -92,6 +93,7 @@ function game() {
     while (userScore < 3 && computerScore < 3) {
         let userChoice = getUserChoice();
         let computerChoice = getComputerChoice();
+        if (!keepPlaying) break;
         roundResults = playRound(userChoice, computerChoice);
         console.log(roundResults);
         if (roundResults === 'Tie!') {
@@ -105,5 +107,7 @@ function game() {
 
 let userScore = 0;
 let computerScore = 0;
-game();
-
+let keepPlaying = true;
+while (keepPlaying) {
+    game();
+}
