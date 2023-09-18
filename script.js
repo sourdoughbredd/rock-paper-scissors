@@ -66,7 +66,7 @@ function playRound(userChoice) {
 function endGame() {
     // Ends the current game and asks user if they'd like to play again
     winStr = (userScore > computerScore) ? "win!" : "lose.";
-    playAgain = alert(`GAME OVER! You ${winStr} Click "Ok" to start a new game.`);
+    playAgain = alert(`GAME OVER! You ${winStr}`);
     // Reset scores
     userScore = 0;
     computerScore = 0;
