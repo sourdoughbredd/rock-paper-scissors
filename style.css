@@ -1,19 +1,58 @@
-html * {
+body {
+  background-color: whitesmoke;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
-  background-color: whitesmoke;
   margin: 0;
+  justify-content: center;
 }
 
+.page-container {
+  padding: 10%;
+}
+
+.page-container > * {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Shared properties of score and round results */
+.results-container {
+  background-color:rgb(196, 224, 252);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 36px;
+}
+
+/* Score Display */
+#scores {
+  display: flex;
+  justify-content: space-around;
+}
+
+.score-title {
+  font-size: 28px;
+}
+
+.score {
+  font-size: 44px;
+}
+
+/* Rock Paper Scissors images */
 .image-container {
   display: flex;
   justify-content: space-between;
   gap: 90px;
-  margin: 10%;
+  padding: 24px;
 }
 
 .image-container img {
   flex: 1 1 auto;
   min-width: 150px;
-  max-width: 350px;
+  max-width: 300px;
 }
