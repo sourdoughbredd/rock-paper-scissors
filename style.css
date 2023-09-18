@@ -27,6 +27,7 @@ body {
 .title {
   text-align: center;
   font-size: 36px;
+  margin-bottom: 10px;;
 }
 
 /* Score Display */
@@ -37,6 +38,7 @@ body {
 
 .score-title {
   font-size: 28px;
+  margin-bottom: 6px;
 }
 
 .score {
@@ -55,4 +57,9 @@ body {
   flex: 1 1 auto;
   min-width: 150px;
   max-width: 300px;
+}
+
+/* Round Results Display */
+#results-text {
+  font-size: 24px;
 }
