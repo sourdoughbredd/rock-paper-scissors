@@ -2,11 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js" defer></script>
   <title>Rock, Paper, Scissors</title>
 </head>
 <body>
-  
+  <div class="page-container">
+    <div class="results-container" id="score-container">
+      <div class="title">Current Score</div>
+      <div id="scores">
+        <div id="user">
+          <div class="score-title" id="user-title">User</div>
+          <div class="score" id="user-score">0</div>
+        </div>
+      <div id="computer">
+        <div class="score-title" id="computer-title">Computer</div>
+        <div class="score" id="computer-score">0</div>
+      </div>
+      </div>
+    </div>
+
+    <div class="image-container">
+        <img id="rock" src="./images/rock.png" alt="Illustration of a rock">
+        <img id="paper" src="./images/paper.png" alt="Illustration of a paper">
+        <img id="scissors" src="./images/scissors.png" alt="Illustration of a pair of scissors">
+    </div>
+
+    <div class="results-container" id="round-container">
+      <div id="round-results">
+        <div class="title">Round Results</div>
+        <div id="results-text">Make a choice to start playing!</div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
