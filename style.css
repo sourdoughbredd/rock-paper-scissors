@@ -7,18 +7,13 @@ html * {
 
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 90px;
-  margin: 150px;
+  margin: 10%;
 }
 
-#rock,
-#paper {
-  width: 200px;
-  height: auto;
-}
-
-#scissors {
-  width: 125px;
-  height: auto;
+.container img {
+  flex: 1 1 auto;
+  min-width: 150px;
+  max-width: 350px;
 }
