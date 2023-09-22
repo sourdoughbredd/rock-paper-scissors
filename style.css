@@ -64,3 +64,16 @@ body {
 #results-text {
   font-size: 24px;
 }
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;;
+}
+
+#github-logo {
+  height: auto;
+  width: 20px;
+  margin-left: 6px;
+}
